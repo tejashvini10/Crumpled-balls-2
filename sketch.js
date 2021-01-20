@@ -12,7 +12,7 @@ var dustbin1,dustbin2,dustbin3,dustbin;
 
 
 function preload(){
-	dustbinImage=loadImage("sprites/dustbin.png");
+	dustbinImage=loadImage("dustbin.png");
 	
 	
 }
