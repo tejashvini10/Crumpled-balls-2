@@ -37,9 +37,7 @@ dustbin1=new Dustbin(600,580,200,20);
 dustbin2=new Dustbin(500,515,20,150);
 dustbin3=new Dustbin(700,515,20,150);
 
-	dustbin1.addImage(dustbinImage);
-	dustbin2.addImage(dustbinImage);
-	dustbin3.addImage(dustbinImage);
+	
 var render = Render.create({
 	element: document.body,
 	engine: engine,
