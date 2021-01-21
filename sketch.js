@@ -64,7 +64,7 @@ function draw() {
  dustbin1.display();
  dustbin2.display();
  dustbin3.display();
- 
+ image(dustbinImage,1000,330,200,200);
  
   drawSprites();
  
