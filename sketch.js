@@ -27,18 +27,8 @@ paper=new Paper(200,450,70);
 ground=new Ground(width/2,600,width,20);
 
 dustbin=createSprite(900,520);
-dustbin.addImage(dustbinImage);
 
-dustbin.scale=0.5;
-
-
-
-dustbin1=new Dustbin(600,580,200,20);
-dustbin2=new Dustbin(500,515,20,150);
-dustbin3=new Dustbin(700,515,20,150);
-
-	
-var render = Render.create({
+	var render = Render.create({
 	element: document.body,
 	engine: engine,
 	options: {
@@ -48,7 +38,10 @@ var render = Render.create({
 	}
 });
 
-	Engine.run(engine);
+Engine.run(engine);
+Render.run(render);
+
+
   
 }
 
@@ -60,19 +53,13 @@ function draw() {
   background("white");
   rectMode(CENTER);
   
-  paper.display();
-  ground.display();
- dustbin1.display();
- dustbin2.display();
- dustbin3.display();
- image(dustbinImage,1000,330,200,200);
- 
+  
   drawSprites();
  
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:85,y:85});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:130,y:-145});
 	}
 }
 
