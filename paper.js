@@ -2,8 +2,8 @@ class Paper{
     constructor(x,y,r){
         var options={
     isStatic:false,
-    restitution:1,
-    friction:0.5,
+    restitution:0.5,
+    friction:0,
     density:1
     
         }
@@ -12,7 +12,7 @@ class Paper{
      this.y=y;
      this.r=r;
      this.image=loadImage("paper.png");
-     this.body=Bodies.circle(this.x,this.y,this.r/2,options);
+     this.body=Bodies.circle(this.x,this.y,(this.r-20)/2,options);
     
     
      
@@ -23,10 +23,11 @@ class Paper{
     var paperpos=this.body.position;
     push()
     translate(paperpos.x,paperpos.y);
+    rectMode(CENTER)
    imageMode(CENTER);
-    strokeWeight(3);
+  
     fill(255,0,255)
-  image(this.image,paperpos.x,paperpos.y,30,30);
+  image(this.image,0,0,this.r, this.r);
     pop()
     }
     }
