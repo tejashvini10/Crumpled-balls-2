@@ -52,7 +52,9 @@ function draw() {
  
   background("white");
   rectMode(CENTER);
-  
+  paper.display();
+  ground.display();
+  dustbin.display();
   
   drawSprites();
  
