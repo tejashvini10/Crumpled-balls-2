@@ -6,16 +6,12 @@ const Body = Matter.Body;
 const Render=Matter.Render;
 
 var engine,world;
-var paper,ground,paperImage,dustbinImage;
-var dustbin1,dustbin2,dustbin3,dustbin;
+var paper,ground,dustbinImage;
+var dustbin;
 
 
 
-function preload(){
-	dustbinImage=loadImage("dustbin.png");
-	
-	
-}
+
 function setup() {
 	createCanvas(800,700);
 
@@ -27,6 +23,7 @@ paper=new Paper(200,450,70);
 ground=new Ground(width/2,600,width,20);
 
 dustbin=createSprite(900,520);
+	
 
 	var render = Render.create({
 	element: document.body,
