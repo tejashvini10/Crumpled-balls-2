@@ -22,7 +22,7 @@ function setup() {
 paper=new Paper(200,450,70);
 ground=new Ground(width/2,600,width,20);
 
-dustbin=createSprite(900,520);
+dustbin=new Dustbin(900,520);
 	
 
 	var render = Render.create({
