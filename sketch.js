@@ -13,7 +13,7 @@ var dustbin;
 
 
 function setup() {
-	createCanvas(800,700);
+	createCanvas(1600,700);
 
 	engine = Engine.create();
 	world = engine.world;
@@ -22,14 +22,14 @@ function setup() {
 paper=new Paper(200,450,70);
 ground=new Ground(width/2,600,width,20);
 
-dustbin=new Dustbin(900,520);
+dustbin=new Dustbin(1200,600);
 	
 
 	var render = Render.create({
 	element: document.body,
 	engine: engine,
 	options: {
-	  width: 1200,
+	  width: 1600,
 	  height: 700,
 	  wireframes: false
 	}
@@ -47,13 +47,13 @@ Render.run(render);
 
 function draw() {
  
-  background("white");
+  background(230);
   rectMode(CENTER);
   paper.display();
   ground.display();
   dustbin.display();
   
-  drawSprites();
+
  
 }
 function keyPressed(){
