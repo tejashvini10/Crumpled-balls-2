@@ -21,7 +21,7 @@ class Ground {
     translate(groundpos.x,groundpos.y);
     rectMode(CENTER)
     
-    fill(0,255,0)
+    fill(128,128,128)
     rect(0,0,this.width,this.height);
     pop()
     }
